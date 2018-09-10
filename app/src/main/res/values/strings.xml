@@ -1,4 +1,22 @@
 <resources>
-    <string name="app_name">SmartGym</string>
+    <string name="app_name">Otronombre</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="mi_nombre">Santiago Cammarano</string>
+
+    <string name="title_pressplano">Press plano</string>
+    <string name="descripcion_pressplano">Este ejercicio es el mas reconocido cuando se trata sobre la construcción de músculo en el pecho. Puede realizarse de muchas maneras, pero esta es su versión plana y con barra</string>
+    <string name="ejecucion_pressplano">Se necesita un banco plano. Uno se debe acostar y colocar los pies bien plantados en el suelo. Debe arquear su espalda y tratar de subir la barra haciendo fuerza con el pecho</string>
+
+    <string name="title_pressinclinado">Press inclinado</string>
+    <string name="descripcion_pressinclinado">Este ejercicio es parecido al press plano, pero recluta más los deltoides frontales junto con el pecho alto</string>
+    <string name="ejecucion_pressinclinado">Se necesita un banco inclinado. Uno se debe acostar y colocar los pies bien plantados en el suelo. Debe arquear su espalda y tratar de subir la barra haciendo fuerza con el pecho</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
