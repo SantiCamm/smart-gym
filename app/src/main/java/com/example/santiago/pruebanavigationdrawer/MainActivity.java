@@ -1,5 +1,6 @@
 package com.example.santiago.pruebanavigationdrawer;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -16,8 +17,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 
+import com.example.santiago.pruebanavigationdrawer.fragments.ActualRutinaFragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.AgregarAlimentoFragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.ArmarRutinaFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.CategoriasEjercicioFragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.NuevoAlimentoFragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.RutinasFragment;
 import com.example.santiago.pruebanavigationdrawer.utils.Utilidades;
 import com.example.santiago.pruebanavigationdrawer.fragments.ContenedorFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.EjercicioFragment;
@@ -27,7 +34,7 @@ import com.example.santiago.pruebanavigationdrawer.fragments.RedFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.SearchFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, CategoriasEjercicioFragment.OnFragmentInteractionListener, EjercicioFragment.OnFragmentInteractionListener, SearchFragment.OnItem1SelectedListener, HomeFragment.OnFragmentInteractionListener, RedFragment.OnFragmentInteractionListener, GreenFragment.OnFragmentInteractionListener, ContenedorFragment.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, NuevoAlimentoFragment.OnFragmentInteractionListener, AgregarAlimentoFragment.OnFragmentInteractionListener, RutinasFragment.OnFragmentInteractionListener, ArmarRutinaFragment.OnFragmentInteractionListener, ActualRutinaFragment.OnFragmentInteractionListener, CategoriasEjercicioFragment.OnFragmentInteractionListener, EjercicioFragment.OnFragmentInteractionListener, SearchFragment.OnItem1SelectedListener, HomeFragment.OnFragmentInteractionListener, RedFragment.OnFragmentInteractionListener, GreenFragment.OnFragmentInteractionListener, ContenedorFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +52,13 @@ public class MainActivity extends AppCompatActivity
 
         if (Utilidades.validaPantalla){
             Fragment fragment = new HomeFragment();
-            getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).commit();
             Utilidades.validaPantalla=false;
         }
 
         Fragment fragment = new HomeFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).commit();
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -76,6 +84,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
@@ -83,6 +92,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setActionBarTitle("Smart Gym");
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
     }
 
     @Override
@@ -119,22 +130,18 @@ public class MainActivity extends AppCompatActivity
             miFragment= new HomeFragment();
             fragmentSeleccionado=true;
         } else if (id == R.id.nav_ejercicios) {
-            miFragment= new ContenedorFragment();
+            miFragment= new SearchFragment();
             fragmentSeleccionado=true;
         } else if (id == R.id.nav_rutinas) {
-            miFragment= new GreenFragment();
+            miFragment= new ContenedorFragment();
             fragmentSeleccionado=true;
         } else if (id == R.id.nav_alimentacion) {
-            miFragment= new RedFragment();
+            miFragment= new AgregarAlimentoFragment();
             fragmentSeleccionado=true;
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
-        if (fragmentSeleccionado){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, miFragment).commit();
+     if (fragmentSeleccionado){
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, miFragment).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

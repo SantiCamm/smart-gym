@@ -82,10 +82,10 @@ public class ContenedorFragment extends Fragment {
         // Inflate the layout for this fragment
         vista= inflater.inflate(R.layout.fragment_contenedor, container, false);
 
-        View parent= (View) container.getParent();
+
 
         if(Utilidades.rotacion==0) {
-
+            View parent= (View) container.getParent();
             if (appBar == null) {
                 appBar = (AppBarLayout) parent.findViewById(R.id.appBar);
                 pestañas = new TabLayout(getActivity());
@@ -119,8 +119,9 @@ public class ContenedorFragment extends Fragment {
 
     private void llenarViewPager(ViewPager viewPager) {
         SeccionesAdapter adapter= new SeccionesAdapter(getFragmentManager());
-        adapter.addFragment(new CategoriasEjercicioFragment(), "CATEGORIAS");
-        adapter.addFragment(new SearchFragment(), "TODOS");
+        adapter.addFragment(new RutinasFragment(), "RUTINAS");
+        adapter.addFragment(new ArmarRutinaFragment(), "ARMAR RUTINA");
+        adapter.addFragment(new ActualRutinaFragment(), "ACTUAL");
 
         viewPager.setAdapter(adapter);
     }

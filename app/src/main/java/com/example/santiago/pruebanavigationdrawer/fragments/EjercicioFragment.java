@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,6 +53,8 @@ public class EjercicioFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*getActivity().getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);*/
         if (getArguments() != null) {
             id = getArguments().getString(ARG_PARAM1);
         }
@@ -66,7 +70,7 @@ public class EjercicioFragment extends Fragment {
         TextView title = v.findViewById(R.id.ejerciciotitle);
         title.setText(ejercicioContent.getTitle());
 
-        ImageView imageView = (ImageView) v.findViewById(R.id.imageView2);
+        ImageView imageView = (ImageView) v.findViewById(R.id.ejerciciopicture);
         imageView.setImageBitmap(ejercicioContent.getImagen());
 
         TextView descripcion = v.findViewById(R.id.ejerciciodescripcion);
@@ -75,7 +79,15 @@ public class EjercicioFragment extends Fragment {
         TextView ejecucion = v.findViewById(R.id.ejercicioejecucion);
         ejecucion.setText(ejercicioContent.getEjecucion());
 
+        hideSoftKeyboard();
+
         return v;
+    }
+
+
+    public void hideSoftKeyboard(){
+        InputMethodManager inputManager = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     @Override

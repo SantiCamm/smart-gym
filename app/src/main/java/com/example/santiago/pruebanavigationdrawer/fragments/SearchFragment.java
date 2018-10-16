@@ -1,5 +1,6 @@
 package com.example.santiago.pruebanavigationdrawer.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import 	android.support.v4.app.Fragment;
@@ -12,13 +13,19 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.example.santiago.pruebanavigationdrawer.MainActivity;
 import com.example.santiago.pruebanavigationdrawer.R;
 import com.example.santiago.pruebanavigationdrawer.utils.ResourceUtils;
+
+import net.yslibrary.android.keyboardvisibilityevent.util.UIUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +55,7 @@ public class SearchFragment extends ListFragment implements SearchView.OnQueryTe
         String s = this.getListAdapter().getItem(position).toString();
         FragmentManager manager = getFragmentManager();
         Fragment mifragment = EjercicioFragment.newInstance(s);
-        manager.beginTransaction().replace(R.id.content_main,mifragment).commit();
+        manager.beginTransaction().replace(R.id.content_main,mifragment).addToBackStack(null).commit();
 
 
 
@@ -74,12 +81,21 @@ public class SearchFragment extends ListFragment implements SearchView.OnQueryTe
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
         searchView.setOnQueryTextListener(this);
-        searchView.setQueryHint("Busca algo papu");
+        searchView.setQueryHint("Busca un ejercicio");
 
         super.onCreateOptionsMenu(menu, inflater);
 
         super.onCreateOptionsMenu(menu, inflater);
     }
+
+    @Override
+    public void onDestroyView() { super.onDestroyView(); }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
 
     @Override
     public boolean onQueryTextSubmit(String query) {
@@ -129,5 +145,11 @@ public class SearchFragment extends ListFragment implements SearchView.OnQueryTe
         mAllValues = ResourceUtils.getListaEjercicios();
         mAdapter = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, mAllValues);
         setListAdapter(mAdapter);
+    }
+
+    @Override
+    public void onResume() {
+        populateList();
+        super.onResume();
     }
 }

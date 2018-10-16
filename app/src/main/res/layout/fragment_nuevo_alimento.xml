@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/frameLayout10"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+tools:context=".fragments.NuevoAlimentoFragment">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="397dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Agregar"
+        android:paddingLeft="3dp"
+        android:fontFamily="@font/robotocondensed"
+        android:textAlignment="viewStart"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="397dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotocondensed"
+        android:background="@color/colorPrimary"
+        android:text="Informacion nutricional"
+        android:paddingLeft="3dp"
+        android:textAlignment="viewStart"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="397dp"
+        android:layout_height="43dp"
+        android:fontFamily="@font/robotocondensed"
+        android:paddingLeft="3dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Alimento"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="397dp"
+        android:layout_height="43dp"
+        android:fontFamily="@font/roboto"
+        android:background="@android:color/white"
+        android:paddingLeft="3dp"
+        android:text="Tamaño de la porcion"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="397dp"
+        android:layout_height="43dp"
+        android:fontFamily="@font/roboto"
+        android:background="@drawable/roundedrectangletexto"
+        android:text="Agregar a"
+        android:paddingLeft="3dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="397dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/roboto"
+        android:background="@drawable/roundedrectangletexto"
+        android:paddingLeft="3dp"
+        android:text="Calorias"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="397dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/roboto"
+        android:background="@android:color/white"
+        android:paddingLeft="3dp"
+        android:text="Grasas"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="397dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/roboto"
+        android:background="@android:color/white"
+        android:paddingLeft="3dp"
+        android:text="Carbohidratos"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="397dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/roboto"
+        android:background="@android:color/white"
+        android:text="Proteinas"
+        android:paddingLeft="3dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+<EditText
+    android:id="@+id/editText3"
+    android:layout_width="75dp"
+    android:layout_height="40dp"
+    android:layout_marginEnd="12dp"
+    android:fontFamily="@font/robotocondensed"
+    android:ems="10"
+    android:inputType="number"
+    android:singleLine="false"
+    android:text="100 grs"
+    android:textColor="@color/colorPrimary"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView22"
+    app:layout_constraintEnd_toEndOf="@+id/textView22"
+    app:layout_constraintTop_toTopOf="@+id/textView22"
+    app:layout_constraintVertical_bias="1.0" />
+
+<EditText
+    android:id="@+id/editText4"
+    android:layout_width="62dp"
+    android:layout_height="41dp"
+    android:layout_marginEnd="124dp"
+    android:layout_marginTop="12dp"
+    android:fontFamily="@font/roboto"
+    android:ems="10"
+    android:inputType="number"
+    android:singleLine="false"
+    android:text="100 grs"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="@+id/textView38"
+    app:layout_constraintHorizontal_bias="0.054"
+    app:layout_constraintStart_toStartOf="@+id/textView38"
+    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+<EditText
+    android:id="@+id/editText10"
+    android:layout_width="62dp"
+    android:layout_height="41dp"
+    android:layout_marginEnd="84dp"
+    android:layout_marginTop="8dp"
+    android:fontFamily="@font/roboto"
+    android:ems="10"
+    android:inputType="number"
+    android:singleLine="false"
+    android:text="100 grs"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="@+id/textView41"
+    app:layout_constraintHorizontal_bias="0.047"
+    app:layout_constraintStart_toStartOf="@+id/textView41"
+    app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+<EditText
+    android:id="@+id/editText9"
+    android:layout_width="62dp"
+    android:layout_height="41dp"
+    android:layout_marginTop="12dp"
+    android:fontFamily="@font/roboto"
+    android:ems="10"
+    android:inputType="number"
+    android:singleLine="false"
+    android:text="100 grs"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="@+id/textView40"
+    app:layout_constraintHorizontal_bias="0.033"
+    app:layout_constraintStart_toStartOf="@+id/textView40"
+    app:layout_constraintTop_toTopOf="@+id/textView40" />
+
+<EditText
+    android:id="@+id/editText8"
+    android:layout_width="62dp"
+    android:layout_height="41dp"
+    android:layout_marginTop="12dp"
+    android:fontFamily="@font/roboto"
+    android:ems="10"
+    android:inputType="number"
+    android:singleLine="false"
+    android:text="100 grs"
+    android:textColor="#000000"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="@+id/textView39"
+    app:layout_constraintHorizontal_bias="0.029"
+    app:layout_constraintStart_toStartOf="@+id/textView39"
+    app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+</android.support.constraint.ConstraintLayout>
