@@ -21,7 +21,7 @@
 
         <ImageView
             android:id="@+id/ejerciciopicture"
-            android:layout_width="403dp"
+            android:layout_width="397dp"
             android:layout_height="180dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -34,17 +34,18 @@
 
         <TextView
             android:id="@+id/ejerciciotitle"
-            android:layout_width="403dp"
+            android:layout_width="397dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/roundedrectanglecompleto"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/robotocondensed"
             android:text="Titulo"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"
+            android:textStyle="bold"
             android:typeface="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +53,12 @@
 
         <TextView
             android:id="@+id/ejerciciodescripcion"
-            android:layout_width="403dp"
+            android:layout_width="397dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/roundedrectangletexto"
+            android:fontFamily="@font/roboto"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
             android:text="Aca va la descripción"
@@ -66,9 +68,10 @@
 
         <TextView
             android:id="@+id/ejercicioejecucion"
-            android:layout_width="403dp"
+            android:layout_width="397dp"
             android:layout_height="wrap_content"
             android:background="@drawable/roundedrectangletexto"
+            android:fontFamily="@font/roboto"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
             android:text="Acá va la ejecución"
@@ -78,12 +81,13 @@
 
         <TextView
             android:id="@+id/titulodescripcion"
-            android:layout_width="403dp"
+            android:layout_width="397dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/roundedrectangletitulo"
+            android:fontFamily="@font/robotocondensed"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
             android:text="Descripción"
@@ -95,12 +99,13 @@
 
         <TextView
             android:id="@+id/tituloejecucion"
-            android:layout_width="403dp"
+            android:layout_width="397dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/roundedrectangletitulo"
+            android:fontFamily="@font/robotocondensed"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
             android:text="Ejecución"
@@ -109,6 +114,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ejerciciodescripcion" />
+
+        <FrameLayout
+            android:id="@+id/youtube_fragment"
+            android:layout_width="403dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicioejecucion">
+
+        </FrameLayout>
 
     </android.support.constraint.ConstraintLayout>
 

@@ -2,6 +2,7 @@ package com.example.santiago.pruebanavigationdrawer.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import 	android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -150,6 +151,8 @@ public class SearchFragment extends ListFragment implements SearchView.OnQueryTe
     @Override
     public void onResume() {
         populateList();
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onResume();
     }
 }

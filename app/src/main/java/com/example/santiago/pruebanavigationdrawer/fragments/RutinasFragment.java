@@ -1,12 +1,14 @@
 package com.example.santiago.pruebanavigationdrawer.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.santiago.pruebanavigationdrawer.R;
 
@@ -65,7 +67,39 @@ public class RutinasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rutinas, container, false);
+        View view = inflater.inflate(R.layout.fragment_rutinas, container, false);
+        Button fuerzabtn = (Button) view.findViewById(R.id.fuerzabtn);
+        Button marcadobtn = (Button) view.findViewById(R.id.marcadobtn);
+        Button hipertrofiabtn = (Button) view.findViewById(R.id.hipertrofiabtn);
+
+        fuerzabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://powerexplosive.com/orden-de-prioridades-para-ganar-fuerza-y-masa-muscular/"));
+                startActivity(browserIntent);
+
+            }
+        });
+
+        marcadobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://powerexplosive.com/deficit-energetico-consejos-para-perder-grasa-mantener-musculo-y-mejorar-el-rendimiento/"));
+                startActivity(browserIntent);
+
+            }
+        });
+
+        hipertrofiabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://powerexplosive.com/hipertrofia/"));
+                startActivity(browserIntent);
+
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -11,30 +11,30 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="383dp"
+        android:id="@+id/desayunoaa"
+        android:layout_width="397dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/carbohidratoscs" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="383dp"
+        android:id="@+id/carbohidratoscs"
+        android:layout_width="397dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/almuerzoaa" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="383dp"
+        android:id="@+id/almuerzoaa"
+        android:layout_width="397dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -45,20 +45,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/proteinascs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
         android:text="Cantidad de semanas"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/carbohidratoscs"
+        app:layout_constraintEnd_toEndOf="@+id/almuerzoaa"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="@+id/almuerzoaa"
+        app:layout_constraintTop_toTopOf="@+id/almuerzoaa" />
 
     <TextView
         android:id="@+id/textView21"
@@ -68,30 +69,32 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
         android:text="Cantidad de dias"
         android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintBottom_toBottomOf="@+id/carbohidratoscs"
+        app:layout_constraintEnd_toEndOf="@+id/carbohidratoscs"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/carbohidratoscs"
+        app:layout_constraintTop_toTopOf="@+id/carbohidratoscs"
         app:layout_constraintVertical_bias="0.333" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/Tamañodelaporcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
         android:text="Cantidad de ejercicios por dia"
         android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintBottom_toBottomOf="@+id/desayunoaa"
+        app:layout_constraintEnd_toEndOf="@+id/desayunoaa"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/desayunoaa"
+        app:layout_constraintTop_toBottomOf="@+id/carbohidratoscs"
         app:layout_constraintVertical_bias="0.4" />
 
     <EditText
@@ -106,11 +109,12 @@
         android:fontFamily="@font/roboto"
         android:inputType="number"
         android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/desayunoaa"
+        app:layout_constraintEnd_toEndOf="@+id/desayunoaa"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/Tamañodelaporcion"
+        app:layout_constraintTop_toBottomOf="@+id/carbohidratoscs"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
@@ -125,11 +129,12 @@
         android:fontFamily="@font/roboto"
         android:inputType="number"
         android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/carbohidratoscs"
+        app:layout_constraintEnd_toEndOf="@+id/carbohidratoscs"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toTopOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/carbohidratoscs"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -144,16 +149,17 @@
         android:fontFamily="@font/roboto"
         android:inputType="number"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/carbohidratoscs"
+        app:layout_constraintEnd_toEndOf="@+id/almuerzoaa"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/proteinascs"
+        app:layout_constraintTop_toTopOf="@+id/almuerzoaa"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="378dp"
+        android:layout_width="375dp"
         android:layout_height="44dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -162,9 +168,11 @@
         android:fontFamily="@font/robotocondensed"
         android:text="ARMAR"
         android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/desayunoaa" />
 
 </android.support.constraint.ConstraintLayout>

@@ -20,7 +20,7 @@
         <!-- TODO: Update blank fragment layout -->
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/comidasalmuerzoaa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -33,13 +33,13 @@
             android:textColor="@android:color/white"
             android:textSize="30dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/button5"
-            app:layout_constraintEnd_toEndOf="@+id/button5"
-            app:layout_constraintStart_toStartOf="@+id/button5"
-            app:layout_constraintTop_toTopOf="@+id/button5" />
+            app:layout_constraintBottom_toBottomOf="@+id/hipertrofiabtn"
+            app:layout_constraintEnd_toEndOf="@+id/hipertrofiabtn"
+            app:layout_constraintStart_toStartOf="@+id/hipertrofiabtn"
+            app:layout_constraintTop_toTopOf="@+id/hipertrofiabtn" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/grasacs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -48,18 +48,18 @@
             android:layout_marginTop="8dp"
             android:elevation="100dp"
             android:fontFamily="@font/robotolight"
-            android:text="Ponete grande perro"
+            android:text="Ganá masa muscular limpia"
             android:textColor="@android:color/white"
             android:textSize="15dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/button5"
-            app:layout_constraintEnd_toEndOf="@+id/button5"
-            app:layout_constraintStart_toStartOf="@+id/button5"
-            app:layout_constraintTop_toTopOf="@+id/button5"
+            app:layout_constraintBottom_toBottomOf="@+id/hipertrofiabtn"
+            app:layout_constraintEnd_toEndOf="@+id/hipertrofiabtn"
+            app:layout_constraintStart_toStartOf="@+id/hipertrofiabtn"
+            app:layout_constraintTop_toTopOf="@+id/hipertrofiabtn"
             app:layout_constraintVertical_bias="0.684" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/comidascolacionesaa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -72,15 +72,15 @@
             android:textColor="@android:color/white"
             android:textSize="30dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/button8"
-            app:layout_constraintEnd_toEndOf="@+id/button8"
+            app:layout_constraintBottom_toBottomOf="@+id/marcadobtn"
+            app:layout_constraintEnd_toEndOf="@+id/marcadobtn"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button8"
+            app:layout_constraintTop_toTopOf="@+id/marcadobtn"
             app:layout_constraintVertical_bias="0.346" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/agregarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -89,19 +89,19 @@
             android:layout_marginTop="8dp"
             android:elevation="100dp"
             android:fontFamily="@font/robotolight"
-            android:text="Marcate perro"
+            android:text="Perdé grasa eficientemente"
             android:textColor="@android:color/white"
             android:textSize="15dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/button8"
+            app:layout_constraintBottom_toBottomOf="@+id/marcadobtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button8"
+            app:layout_constraintTop_toTopOf="@+id/marcadobtn"
             app:layout_constraintVertical_bias="0.543" />
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/meriendaaa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -110,18 +110,18 @@
             android:layout_marginTop="8dp"
             android:elevation="100dp"
             android:fontFamily="@font/robotolight"
-            android:text="Gana fuerza perro"
+            android:text="Ganá fuerza "
             android:textColor="@android:color/white"
             android:textSize="15dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toBottomOf="@+id/fuerzabtn"
+            app:layout_constraintEnd_toEndOf="@+id/fuerzabtn"
+            app:layout_constraintStart_toStartOf="@+id/fuerzabtn"
+            app:layout_constraintTop_toTopOf="@+id/fuerzabtn"
             app:layout_constraintVertical_bias="0.554" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/caloriasconsumidas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -134,14 +134,14 @@
             android:textColor="@android:color/white"
             android:textSize="30dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toBottomOf="@+id/fuerzabtn"
+            app:layout_constraintEnd_toEndOf="@+id/fuerzabtn"
+            app:layout_constraintStart_toStartOf="@+id/fuerzabtn"
+            app:layout_constraintTop_toTopOf="@+id/fuerzabtn"
             app:layout_constraintVertical_bias="0.353" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/marcadobtn"
             android:layout_width="413dp"
             android:layout_height="207dp"
             android:layout_marginEnd="8dp"
@@ -153,7 +153,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/fuerzabtn"
             android:layout_width="413dp"
             android:layout_height="207dp"
             android:layout_marginEnd="8dp"
@@ -165,7 +165,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/hipertrofiabtn"
             android:layout_width="413dp"
             android:layout_height="207dp"
             android:layout_marginEnd="8dp"

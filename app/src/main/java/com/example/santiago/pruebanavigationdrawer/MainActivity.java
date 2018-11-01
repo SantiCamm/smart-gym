@@ -1,5 +1,7 @@
 package com.example.santiago.pruebanavigationdrawer;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
@@ -23,8 +25,11 @@ import com.example.santiago.pruebanavigationdrawer.fragments.ActualRutinaFragmen
 import com.example.santiago.pruebanavigationdrawer.fragments.AgregarAlimentoFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.ArmarRutinaFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.CategoriasEjercicioFragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.Contenedor2Fragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.IMCFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.NuevoAlimentoFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.RutinasFragment;
+import com.example.santiago.pruebanavigationdrawer.fragments.WaterFragment;
 import com.example.santiago.pruebanavigationdrawer.utils.Utilidades;
 import com.example.santiago.pruebanavigationdrawer.fragments.ContenedorFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.EjercicioFragment;
@@ -34,7 +39,7 @@ import com.example.santiago.pruebanavigationdrawer.fragments.RedFragment;
 import com.example.santiago.pruebanavigationdrawer.fragments.SearchFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, NuevoAlimentoFragment.OnFragmentInteractionListener, AgregarAlimentoFragment.OnFragmentInteractionListener, RutinasFragment.OnFragmentInteractionListener, ArmarRutinaFragment.OnFragmentInteractionListener, ActualRutinaFragment.OnFragmentInteractionListener, CategoriasEjercicioFragment.OnFragmentInteractionListener, EjercicioFragment.OnFragmentInteractionListener, SearchFragment.OnItem1SelectedListener, HomeFragment.OnFragmentInteractionListener, RedFragment.OnFragmentInteractionListener, GreenFragment.OnFragmentInteractionListener, ContenedorFragment.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener,WaterFragment.OnFragmentInteractionListener, IMCFragment.OnFragmentInteractionListener, Contenedor2Fragment.OnFragmentInteractionListener, NuevoAlimentoFragment.OnFragmentInteractionListener, AgregarAlimentoFragment.OnFragmentInteractionListener, RutinasFragment.OnFragmentInteractionListener, ArmarRutinaFragment.OnFragmentInteractionListener, ActualRutinaFragment.OnFragmentInteractionListener, CategoriasEjercicioFragment.OnFragmentInteractionListener, EjercicioFragment.OnFragmentInteractionListener, SearchFragment.OnItem1SelectedListener, HomeFragment.OnFragmentInteractionListener, RedFragment.OnFragmentInteractionListener, GreenFragment.OnFragmentInteractionListener, ContenedorFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +87,24 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+
+        /*int stackCount = getFragmentManager().getBackStackEntryCount();
+        Fragment frag = getSupportFragmentManager().findFragmentById(R.id.content_main);
+        if(frag instanceof HomeFragment){
+
+        }
+        if (stackCount == 1) {
+            super.onBackPressed(); //
+        } else {
+
+            FragmentManager fm = getFragmentManager();
+            fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new HomeFragment()).commit();
+        }
+        */
+
     }
+
 
 
     @Override
@@ -110,9 +132,9 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -136,7 +158,7 @@ public class MainActivity extends AppCompatActivity
             miFragment= new ContenedorFragment();
             fragmentSeleccionado=true;
         } else if (id == R.id.nav_alimentacion) {
-            miFragment= new AgregarAlimentoFragment();
+            miFragment= new Contenedor2Fragment();
             fragmentSeleccionado=true;
         }
 

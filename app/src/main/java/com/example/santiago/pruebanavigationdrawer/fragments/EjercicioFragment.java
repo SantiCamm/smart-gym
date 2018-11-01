@@ -1,9 +1,11 @@
 package com.example.santiago.pruebanavigationdrawer.fragments;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -19,6 +21,9 @@ import com.example.santiago.pruebanavigationdrawer.MainActivity;
 import com.example.santiago.pruebanavigationdrawer.R;
 import com.example.santiago.pruebanavigationdrawer.models.EjercicioContent;
 import com.example.santiago.pruebanavigationdrawer.utils.ResourceUtils;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 
 public class EjercicioFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +34,10 @@ public class EjercicioFragment extends Fragment {
     private String id;
 
     private OnFragmentInteractionListener mListener;
+
+    private YouTubePlayer Yplayer;
+    private static final String YoutubeDeveloperKey ="AIzaSyCxypltW6AIo0qmQCwP8ZhmrSK-llVcDVk";
+    private static final int RECOVERY_DIALOG_REQUEST= 1;
 
     public EjercicioFragment() {
         // Required empty public constructor
@@ -65,7 +74,26 @@ public class EjercicioFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_ejercicio, container, false);
 
-        EjercicioContent ejercicioContent = ResourceUtils.getEjercicio(id, this.getContext());
+        final EjercicioContent ejercicioContent = ResourceUtils.getEjercicio(id, this.getContext());
+
+        YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(R.id.youtube_fragment, youTubePlayerFragment).commit();
+
+        youTubePlayerFragment.initialize(YoutubeDeveloperKey, new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+                if (!b) {
+                    youTubePlayer.cueVideo(ejercicioContent.getVideo());
+                    youTubePlayer.setFullscreen(false);
+                }
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
+            }
+        });
 
         TextView title = v.findViewById(R.id.ejerciciotitle);
         title.setText(ejercicioContent.getTitle());
@@ -112,6 +140,13 @@ public class EjercicioFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+    }
+
+    @Override
+    public void onResume() {
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        super.onResume();
     }
 
     @Override

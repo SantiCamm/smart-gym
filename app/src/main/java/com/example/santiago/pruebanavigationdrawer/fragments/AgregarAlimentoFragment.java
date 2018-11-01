@@ -1,5 +1,6 @@
 package com.example.santiago.pruebanavigationdrawer.fragments;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,8 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.santiago.pruebanavigationdrawer.R;
+
+import org.w3c.dom.Text;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -80,6 +90,43 @@ public class AgregarAlimentoFragment extends Fragment implements View.OnClickLis
         buttonmerienda.setOnClickListener(this);
         buttoncena.setOnClickListener(this);
         buttoncolaciones.setOnClickListener(this);
+
+
+        ///////////////CONSEJOS DIARIOS
+        TextView consejos = (TextView) view.findViewById(R.id.consejos);
+        Calendar c = Calendar.getInstance();
+        int daymonth = c.get(Calendar.DAY_OF_MONTH);
+        String[] array = getResources().getStringArray(R.array.consejos);
+        String consejodeldia = array[daymonth];
+        consejos.setText(consejodeldia);
+        //////////////////////////////////
+
+        final TextView fecha = (TextView) view.findViewById(R.id.fecha);
+        fecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar calendario = Calendar.getInstance();
+                int yy = calendario.get(Calendar.YEAR);
+                int mm = calendario.get(Calendar.MONTH);
+                int dd = calendario.get(Calendar.DAY_OF_MONTH);
+
+
+                DatePickerDialog datePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+                        String fecha2 = String.valueOf(year) +"-"+String.valueOf(monthOfYear)
+                                +"-"+String.valueOf(dayOfMonth);
+                        fecha.setText(fecha2);
+
+                    }
+                }, yy, mm, dd);
+
+                datePicker.show();
+            }
+        });
+
+
 
 
         return view;

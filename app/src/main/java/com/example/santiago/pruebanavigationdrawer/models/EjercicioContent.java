@@ -7,6 +7,7 @@ public class EjercicioContent {
     private String descripcion;
     private String ejecucion;
     private Bitmap imagen;
+    private String video;
 
     public String getTitle() {
         return title;
@@ -38,5 +39,13 @@ public class EjercicioContent {
 
     public void setImagen(Bitmap imagen) {
         this.imagen = imagen;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }
